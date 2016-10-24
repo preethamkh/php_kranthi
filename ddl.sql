@@ -24,3 +24,7 @@ CREATE TABLE `swinburn`.`orders` (
   PRIMARY KEY (`order_id`),
   UNIQUE INDEX `idUsers_UNIQUE` (`order_id` ASC))
 ENGINE = InnoDB;
+
+
+CREATE TABLE `kranthi`.`attempts` ( `attemptid` INT NOT NULL , `dateandtime` DATETIME NOT NULL , `firstname` VARCHAR(20) NOT NULL , `lastname` INT(20) NOT NULL , `studnumber` INT NOT NULL , `attemptnumber` INT NOT NULL , `score` INT NOT NULL , PRIMARY KEY (`attemptid`)) ENGINE = MyISAM;
+
