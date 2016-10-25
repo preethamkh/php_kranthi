@@ -17,6 +17,16 @@ $conn = @mysqli_connect($host,
     $pwd,
     $sql_db
 );
+
+
+// check answers
+function checkAnswers() {
+    $score = 0;
+    $q1 = $_POST['Question1'];
+    echo "Q1: "
+}
+
+
 // Checks if connection is successful
 if (!$conn) {
 // Displays an error message
