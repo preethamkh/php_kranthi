@@ -1,22 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta name="description" content="IPV4  & IPV6 Technologies"/>
-    <meta name="keywords" content="HTML, CSS"/>
-    <meta name="author" content="Rajasree"/>
-    <title>Quiz</title>
-    <link rel="stylesheet" href="styles/style.css" type="text/css" media="screen"/>
-    <script src="Scripts/quiz.js"></script>
-    <style>
-        p, h4 {
-            color: black !important;
-            horiz-align: left;
-        }
-    </style>
-</head>
-
-<body>
 <?php
 require_once("Header.php");
 ?>
@@ -33,32 +14,30 @@ require_once("Header.php");
             <section>
                 <fieldset id="quizquestionbs">
                     <p>Student ID:
-                        <input type="text" name="studnumber" id="studnumber"/>
+                        <input type="text" name="studnumber" id="studnumber" required/>
                     </p>
                     <p>First name:
-                        <input type="text" name="firstname" id="firstname"/>
+                        <input type="text" name="firstname" id="firstname" required/>
                     </p>
                     <p>Last name:
-                        <input type="text" name="lastname" id="lastname"/>
+                        <input type="text" name="lastname" id="lastname" required/>
                     </p>
-                    <p>1. The size of IP address in IPv6 is<br>
-                        <input type="radio" class="subtopic" name="Question1" id="q11" value="fourb"/>4bytes<br/>
-                        <input type="radio" class="subtopic" name="Question1" id="q12"
-                               value="onetwoeightb"/>128bits<br/>
-                        <input type="radio" class="subtopic" name="Question1" id="q13" value="eightb"/>8bits<br/>
-                        <input type="radio" class="subtopic" name="Question1" id="q14" value="onezerob"/>100bits</p>
+                        <input type="radio" class="subtopic" name="q1" value="fourb" required/>4bytes<br/>
+                        <input type="radio" class="subtopic" name="q1" value="onetwoeightb" required/>128bits<br/>
+                        <input type="radio" class="subtopic" name="q1" value="eightb" required/>8bits<br/>
+                        <input type="radio" class="subtopic" name="q1" value="onezerob" required/>100bits</p>
                     <p>2. In the IPv6 header,the traffic class field is similar to which field in the IPv4 header?<br>
-                        <input type="radio" class="subtopic" name="Question2" id="q21" value="Fragmentation2"/>Fragmentation
+                        <input type="radio" class="subtopic" name="q2" value="Fragmentation2" required/>Fragmentation
                         field<br>
-                        <input type="radio" class="subtopic" name="Question2" id="q22" value="Fastswitching"/>Fast-switching<br>
-                        <input type="radio" class="subtopic" name="Question2" id="q23" value="ToSfield"/>ToS field<br>
-                        <input type="radio" class="subtopic" name="Question2" id="q24" value="Optionfield"/>Option field<br>
+                        <input type="radio" class="subtopic" name="q2" value="Fastswitching" required/>Fast-switching<br>
+                        <input type="radio" class="subtopic" name="q2" value="ToSfield" required/>ToS field<br>
+                        <input type="radio" class="subtopic" name="q2" value="Optionfield" required/>Option field<br>
                     </p>
                     <p>3. These are the features present in IPv4 but not in IPv6.<br>
-                        <input type="checkbox" class="subtopic" id="q31" value="Fragmentation3"/>Fragmentation<br>
-                        <input type="checkbox" class="subtopic" id="q32" value="Headerchecksum"/>Header checksum<br>
-                        <input type="checkbox" class="subtopic" id="q33" value="Options"/>Options<br>
-                        <input type="checkbox" class="subtopic" id="q34" value="All of the mentioned"/>All of the
+                        <input type="radio" class="subtopic" name="q3" value="Fragmentation3" required/>Fragmentation<br>
+                        <input type="radio" class="subtopic" name="q3" value="Headerchecksum" required/>Header checksum<br>
+                        <input type="radio" class="subtopic" name="q3" value="Options" required/>Options<br>
+                        <input type="radio" class="subtopic" name="q3" value="All of the mentioned" required/>All of the
                         mentioned<br></p>
                     <p>4. Dual-stack approach refers to.
                         <!--<input type="text" name="Question4" id="q4" size="50" maxlength="50" />-->
@@ -93,5 +72,3 @@ require_once("Header.php");
 <?php
 require_once("Footer.php");
 ?>
-</body>
-</html>

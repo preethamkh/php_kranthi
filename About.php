@@ -4,9 +4,12 @@
 	<meta charset="utf-8"/> 
 	<meta name="description" content="IPV4  & IPV6 Technologies"/> 
 	<meta name="keywords" content="HTML, CSS"/> 
-	<meta name="author" content="Rajasree"/> 
+	<meta name="author" content=""/>
     <title>About Me</title>
-    <link rel="stylesheet" href="styles/style.css" type="text/css" media="screen" />   
+    <link rel="stylesheet" href="styles/style.css" type="text/css" media="screen" />
+	<script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" />
 <script src="Scripts/quiz.js"></script>		
 	</head>
 

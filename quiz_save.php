@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: admin
- * Date: 25/10/2016
- * Time: 2:27 PM
- */
 
 /* Check for answers in this file and then submit along with score / insert into DB */
 
@@ -22,8 +16,25 @@ $conn = @mysqli_connect($host,
 // check answers
 function checkAnswers() {
     $score = 0;
-    $q1 = $_POST['Question1'];
-    echo "Q1: "
+    $q1 = $_POST['q1'];
+    echo "Q1: " . $q1;
+
+    $a1 = 'eightb';
+    $a2 = 'Fastswitching';
+    $a3 = 'Headerchecksum';
+    $a4 = 'single';
+    $a5 = '96 to 127';
+
+    $ans1 = $_POST['q1'];
+    $ans2 = $_POST['q2'];
+    $ans3 = $_POST['q3'];
+    $ans4 = $_POST['q4'];
+    $ans5 = $_POST['q5'];
+
+    if($a1 != $ans1)
+        return false;
+    else
+        return true;
 }
 
 
@@ -41,15 +52,20 @@ if (!$conn) {
         $score = 5;
         $dateandtime = date("Y-m-d H:i:s");
 
+        $q1 = $_POST['q1'];
+
         if (isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['studnumber'])) {
             $SQL = "INSERT INTO attempts (studnumber, firstname, lastname, attemptnumber, score, dateandtime) VALUES ($studnumber, '".$firstname."', '".$lastname."', $attemptnumber, $score, '".$dateandtime."')";
-            echo "studnumber: " . $_POST['studnumber'] . "<br />";
+           /* echo "studnumber: " . $_POST['studnumber'] . "<br />";
             echo "firstname: " . $_POST['firstname'] . "<br />";
             echo "lastname: " . $_POST['lastname'] . "<br />";
             echo "attemptnumber: " . $attemptnumber . "<br />";
             echo "score: " . $score . "<br />";
             echo "date and time: " . $dateandtime . "<br />";
-            echo $SQL;
+            echo "Q1: " . $q1;
+            echo $SQL;*/
+
+            if(!checkAnswers());
 
             $result = mysqli_query($conn, $SQL);
         }

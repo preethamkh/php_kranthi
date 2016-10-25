@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta name="description" content="IPV4  & IPV6 Technologies"/>
-    <meta name="keywords" content="HTML, CSS"/>
-    <meta name="author" content="Rajasree"/>
-    <title>Results</title>
-    <link rel="stylesheet" href="styles/style.css" type="text/css" media="screen"/>
-    <script src="Scripts/quiz.js"></script>
-</head>
-
-<body>
 <?php
+require_once("Header.php");
 /*session_start(); // start the session
-$Email = $_SESSION["email"]; */?>
-<li><a href="quizmanager.php">Back to Quiz Manager</a></li>
+$Email = $_SESSION["email"]; */ ?>
+<div class="well">
+    <a href="quizmanager.php">Back to Quiz Manager</a>
+</div>
 <?php
 require_once("settings.php"); //connection info
 $conn = @mysqli_connect($host,
@@ -39,7 +29,7 @@ if (!$conn) {
         echo "<p>Something is wrong with ", $query, "</p>";
     } else {
 // Display the retrieved records
-        echo "<table border=\"1\">";
+        echo "<table class='table-bordered'>";
         echo "<tr>"
             . "<th scope=\"col\">Attempt ID</th>"
             . "<th scope=\"col\">Score</th>"
@@ -63,5 +53,3 @@ if (!$conn) {
 echo "</section>";
 require_once("Footer.php");
 ?>
-</body>
-</html>
