@@ -10,7 +10,7 @@ echo "<a href='quizmanager.php'>Back to Quiz Manager</a><br /><br />";
 
     <form method="post" name="studdetails">
         <div class="form-group">
-            <label for="studnumber">Delete attems for the student id:</label>
+            <label for="studnumber">Delete attempts for the student id:</label>
             <input type="text" class="" name="studnumber">
         </div>
         <input type="submit" name="submit" class="btn btn-default" value="submit" />

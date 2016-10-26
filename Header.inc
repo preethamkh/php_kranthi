@@ -31,5 +31,6 @@ Last updated: 7th Oct 2016
     <a class="btn" href="topic.php">Topic Description</a>|
     <a class="btn" href="quiz_form.php">Take a Quiz Here</a>|
     <a class="btn" href="enhancements.php">Find Enhancements</a>|
+    <a class="btn" href="quizmanager.php">Quiz Manager</a>
 
 </nav>

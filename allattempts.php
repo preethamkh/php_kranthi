@@ -21,7 +21,6 @@ if (!$conn) {
 
     // param check
     if(@$_REQUEST['param1']=="student100"){
-        echo "okay fetch student 100 boy";
 
         $query = "select attemptid, firstname, lastname, studnumber, attemptnumber, score, dateandtime FROM attempts where attemptnumber = 1 and score = 5";
 
@@ -31,7 +30,7 @@ if (!$conn) {
             }
         }
 
-        echo "echoing the query: " + $query;
+        //echo "echoing the query: " + $query;
 
         $result = mysqli_query($conn, $query);
 
@@ -76,6 +75,7 @@ if (!$conn) {
             // Display the retrieved records
             echo "<table class='table-bordered'>";
             echo "<tr>"
+                . "<th>Attemptid</th>"
                 . "<th><a href='allattempts.php?param1=student50&sort=firstname'>Firstname</a></th>"
                 . "<th><a href='allattempts.php?param1=student50&sort=lastname'>Lastname</a></th>"
                 . "<th><a href='allattempts.php?param1=student50&sort=studnumber'>Student ID</a></th>"
