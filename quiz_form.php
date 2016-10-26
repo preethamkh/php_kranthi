@@ -41,20 +41,20 @@ require_once("Header.php");
                         mentioned<br></p>
                     <p>4. Dual-stack approach refers to.
                         <!--<input type="text" name="Question4" id="q4" size="50" maxlength="50" />-->
-                        <select name="stack" id="q4" required="required">
+                        <select name="q4" required="required">
                             <option value="0">Select answer</option>
-                            <option value="1">single</option>
-                            <option value="2">dual</option>
+                            <option value="single">single</option>
+                            <option value="dual">dual</option>
                         </select>
                     </p>
                     <p>5. Teredo is an automatic tunneling technique. In each client the obfuscated IPv4 address is
                         represented by bits<br>
-                        <select name="state" id="q5" required="required">
+                        <select name="q5" required="required">
                             <option value="0">Select answer</option>
-                            <option value="1">96 to 127</option>
-                            <option value="2">0 to 63</option>
-                            <option value="3">80 to 95</option>
-                            <option value="4">64 to 79</option>
+                            <option value="96 to 127">96 to 127</option>
+                            <option value="0 to 63">0 to 63</option>
+                            <option value="80 to 95">80 to 95</option>
+                            <option value="64 to 79">64 to 79</option>
                         </select></p>
                     <!--<p><input type="submit" id="checkanswers" value="Check Answers"/></p>
                     <input type="hidden" name="score" id="score" value="">-->

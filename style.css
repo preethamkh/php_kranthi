@@ -122,12 +122,12 @@ color : green;
 }
 
 a:hover, active {
-    background-color: orange;
-    color: red;
+    background-color: grey;
+    color: white;
 }
 
 aside:hover {
     padding: 0.2em 0.6em;
-    border: medium solid green;
+    border: medium solid grey;
     float: right;
 }

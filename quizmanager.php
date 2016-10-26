@@ -2,18 +2,31 @@
 require_once("Header.php");
 ?>
 <header>
-    <div id="spacer">
+    <div class="well">
         <p>Quiz Manager</p>
     </div>
-    <h1>Quiz Operations</h1>
+<!--    <h1>Quiz Operations</h1>-->
     <br/><br/>
     <nav>
-        <ul>
-            <li><a href="allattempts.php">View All Attempts</a></li>
-            <li><a href="Topthree.php">Top 3 Scores</a></li>
-
+        <div class="panel panel-default">
+            <div class="panel-body"><a href="allattempts.php">List all attempts</a></div>
+            <div class="panel-body"><a href="allattempts.php">List all attempts for a particular student</a></div>
+            <div class="panel-body"><a href="allattempts.php?param1=student100">List all students with 100% on their first attempt</a></div>
+            <div class="panel-body"><a href="allattempts.php?param1=student50">List all students with < than 50% on the third attempt</a></div>
+            <div class="panel-body"><a href="allattempts.php">Delete attempts for a particular student</a></div>
+            <div class="panel-body"><a href="allattempts.php">Change the score for a quiz attempt</a></div>
+            <div class="panel-body"><a href="Topthree.php">Top 3 Scores</a></div>
+        </div>
+        <!--<ul>
+            <a href="allattempts.php">List all attempts</a>
+            <a href="allattempts.php">List all attempts for a particular student</a>
+            <a href="allattempts.php">List all students with 100% on their first attempt</a>
+            <a href="allattempts.php">List all students with $lt; than 50% on the third attempt</a>
+            <a href="allattempts.php">Delete attempts for a particular student</a>
+            <a href="allattempts.php">Change the score for a quiz attempt</a>
+            <a href="Topthree.php">Top 3 Scores</a>
             <li><a href="filedstudents.php">Filed Students</a></li>
-        </ul>
+        </ul>-->
     </nav>
 </header>
 
