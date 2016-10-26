@@ -71,7 +71,7 @@ echo "<p>Something is wrong with ", $query, "</p>";
 mysqli_close($conn);
 } // if successful database connection
 echo "</section>";
-		require_once ("Footer.php");
+		require_once("Footer.inc");
 		?>
 			</body>
 </html>

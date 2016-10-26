@@ -1,5 +1,5 @@
 <?php
-require_once("Header.php");
+require_once("Header.inc");
 /*session_start(); // start the session
 $Email = $_SESSION["email"]; */ ?>
 <div class="well">
@@ -51,5 +51,5 @@ if (!$conn) {
     mysqli_close($conn);
 } // if successful database connection
 echo "</section>";
-require_once("Footer.php");
+require_once("Footer.inc");
 ?>

@@ -1,7 +1,7 @@
 <?php
 	session_start(); // start the session
 $Email=$_SESSION["email"];
-        require_once ("Header.php");
+        require_once("Header.inc");
  require_once ("settings.php"); //connection info
 $conn = @mysqli_connect($host,
 $user,
@@ -58,5 +58,5 @@ echo "<p>Something is wrong with ", $query, "</p>";
 mysqli_close($conn);
 } // if successful database connection
 echo "</section>";
-		require_once ("Footer.php");
+		require_once("Footer.inc");
 		?>

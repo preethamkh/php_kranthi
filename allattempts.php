@@ -1,5 +1,5 @@
 <?php
-require_once("Header.php");
+require_once("Header.inc");
 
     /*session_start(); // start the session
     $Email=$_SESSION["email"];
@@ -24,6 +24,15 @@ if (!$conn) {
         echo "okay fetch student 100 boy";
 
         $query = "select attemptid, firstname, lastname, studnumber, attemptnumber, score, dateandtime FROM attempts where attemptnumber = 1 and score = 5";
+
+        if(isset($_REQUEST['sort'])) {
+            if($_REQUEST['sort'] == 'firstname') {
+                $query .= " order by firstname desc";
+            }
+        }
+
+        echo "echoing the query: " + $query;
+
         $result = mysqli_query($conn, $query);
 
         if (!$result) {
@@ -32,13 +41,13 @@ if (!$conn) {
             // Display the retrieved records
             echo "<table class='table-bordered'>";
             echo "<tr>"
-                . "<th>Attempt ID</th>"
-                . "<th>Firstname</th>"
-                . "<th>Lastname</th>"
-                . "<th>Student ID</th>"
-                . "<th>Attempt No.</th>"
-                . "<th>Score</th>"
-                . "<th>Date/Time</th>"
+                . "<th>Attempt ID</a></th>"
+                . "<th><a href='allattempts.php?param1=student100&sort=firstname'>Firstname</a></th>"
+                . "<th><a href='allattempts.php?param1=student100&sort=lastname'>Lastname</a></th>"
+                . "<th><a href='allattempts.php?param1=student100&sort=studnumber'>Student ID</a></th>"
+                . "<th><a href='allattempts.php?param1=student100&sort=attemptnumber'>Attempt No.</a></th>"
+                . "<th><a href='allattempts.php?param1=student100&sort=score'>Score</a></th>"
+                . "<th><a href='allattempts.php?param1=student100&sort=dateandtime'>Date/Time</a></th>"
                 . "</tr>";
             // retrieve current record pointed by the result pointer
             while ($row = mysqli_fetch_assoc($result)) {
@@ -67,13 +76,12 @@ if (!$conn) {
             // Display the retrieved records
             echo "<table class='table-bordered'>";
             echo "<tr>"
-                . "<th>Attempt ID</th>"
-                . "<th>Firstname</th>"
-                . "<th>Lastname</th>"
-                . "<th>Student ID</th>"
-                . "<th>Attempt No.</th>"
-                . "<th>Score</th>"
-                . "<th>Date/Time</th>"
+                . "<th><a href='allattempts.php?param1=student50&sort=firstname'>Firstname</a></th>"
+                . "<th><a href='allattempts.php?param1=student50&sort=lastname'>Lastname</a></th>"
+                . "<th><a href='allattempts.php?param1=student50&sort=studnumber'>Student ID</a></th>"
+                . "<th><a href='allattempts.php?param1=student50&sort=attemptnumber'>Attempt No.</a></th>"
+                . "<th><a href='allattempts.php?param1=student50&sort=score'>Score</a></th>"
+                . "<th><a href='allattempts.php?param1=student50&sort=dateandtime'>Date/Time</a></th>"
                 . "</tr>";
             // retrieve current record pointed by the result pointer
             while ($row = mysqli_fetch_assoc($result)) {
@@ -105,16 +113,19 @@ if (!$conn) {
             // Display the retrieved records
             echo "<table class='table-bordered'>";
             echo "<tr>"
-                . "<th>Attempt ID</th>"
-                . "<th>Firstname</th>"
-                . "<th>Lastname</th>"
-                . "<th>Student ID</th>"
-                . "<th>Attempt No.</th>"
-                . "<th>Score</th>"
-                . "<th>Date/Time</th>"
+                . "<th>AttemptID</th>"
+                . "<th><a href='allattempts.php?sort=firstname'>Firstname</a></th>"
+                . "<th><a href='allattempts.php?sort=lastname'>Lastname</a></th>"
+                . "<th><a href='allattempts.php?sort=studnumber'>Student ID</a></th>"
+                . "<th><a href='allattempts.php?sort=attemptnumber'>Attempt No.</a></th>"
+                . "<th><a href='allattempts.php?sort=score'>Score</a></th>"
+                . "<th><a href='allattempts.php?sort=dateandtime'>Date/Time</a></th>"
+                . "<th>Change Score</th>"
                 . "</tr>";
             // retrieve current record pointed by the result pointer
             while ($row = mysqli_fetch_assoc($result)) {
+                $theVar = $row["studnumber"];
+                $aid = $row["attemptid"];
                 echo "<tr>";
                 echo "<td>", $row["attemptid"], "</td>";
                 echo "<td>", $row["firstname"], "</td>";
@@ -123,6 +134,7 @@ if (!$conn) {
                 echo "<td>", $row["attemptnumber"], "</td>";
                 echo "<td>", $row["score"], "</td>";
                 echo "<td>", $row["dateandtime"], "</td>";
+                echo "<td><a href='change_score.php?sid=$theVar&attemptid=$aid'>Change</a></td>";
                 echo "</tr>";
             }
             echo "</table>";
@@ -136,5 +148,5 @@ if (!$conn) {
 } // if successful database connection
 echo "</section>";
 echo "</div>";
-require_once("Footer.php");
+require_once("Footer.inc");
 ?>

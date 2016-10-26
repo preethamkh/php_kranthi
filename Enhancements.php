@@ -1,5 +1,5 @@
 <?php
-require_once("Header.php");
+require_once("Header.inc");
 ?>
 <div id="spacer">
     <p>Introduction to IPV4 and IPV6 Technologies</p>
@@ -128,5 +128,5 @@ require_once("Header.php");
     </section>
 </section>
 <?php
-require_once("Footer.php");
+require_once("Footer.inc");
 ?>

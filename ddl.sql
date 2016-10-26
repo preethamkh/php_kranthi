@@ -26,5 +26,5 @@ CREATE TABLE `swinburn`.`orders` (
 ENGINE = InnoDB;
 
 
-CREATE TABLE `kranthi`.`attempts` ( `attemptid` INT NOT NULL , `dateandtime` DATETIME NOT NULL , `firstname` VARCHAR(20) NOT NULL , `lastname` INT(20) NOT NULL , `studnumber` INT NOT NULL , `attemptnumber` INT NOT NULL , `score` INT NOT NULL , PRIMARY KEY (`attemptid`)) ENGINE = MyISAM;
+CREATE TABLE `kranthi`.`attempts` ( `attemptid` INT NOT NULL , `dateandtime` DATETIME NOT NULL , `firstname` VARCHAR(20) NOT NULL , `lastname` VARCHAR(20) NOT NULL , `studnumber` INT NOT NULL , `attemptnumber` INT NOT NULL , `score` INT NOT NULL , PRIMARY KEY (`attemptid`)) ENGINE = MyISAM;
 

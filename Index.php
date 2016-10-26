@@ -1,5 +1,5 @@
 <?php
-require_once("Header.php");
+require_once("Header.inc");
 ?>
 <section class="block">
     <article>
@@ -17,5 +17,5 @@ require_once("Header.php");
     </article>
 </section>
 <?php
-require_once("Footer.php");
+require_once("Footer.inc");
 ?>

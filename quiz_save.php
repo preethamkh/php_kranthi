@@ -1,5 +1,5 @@
 <?php
-require_once("Header.php");
+require_once("Header.inc");
 /* Check for answers in this file and then submit along with score / insert into DB */
 /* for now just insert - test this functionality */
 
@@ -65,6 +65,16 @@ if (!$conn) {
 } else {
     if (isset($_POST['submit'])) {
 
+        // create table if it doesn't exist
+        $test1 = "SELECT attemptid FROM attempts";
+        $test2 = mysqli_query($conn, $test1);
+
+        if(empty($test2)) {
+            $qry = "CREATE TABLE `kranthi`.`attempts` ( `attemptid` INT NOT NULL , `dateandtime` DATETIME NOT NULL , `firstname` VARCHAR(20) NOT NULL , `lastname` VARCHAR(20) NOT NULL , `studnumber` INT NOT NULL , `attemptnumber` INT NOT NULL , `score` INT NOT NULL , PRIMARY KEY (`attemptid`)) ENGINE = MyISAM;";
+
+            $r1 = mysqli_query($conn, $qry);
+        }
+
         $studnumber = (int)$_POST['studnumber'];
         $firstname = $_POST['firstname'];
         $lastname = $_POST['lastname'];
@@ -129,5 +139,5 @@ if (!$conn) {
     }
 }
 echo "</div>";
-require_once("Footer.php");
+require_once("Footer.inc");
 ?>

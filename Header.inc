@@ -22,10 +22,10 @@ Last updated: 7th Oct 2016
 </head>
 
 <body>
-<!--<header id="header">
+<header id="header">
     Media Compression
 
-</header>-->
+</header>
 <nav class="menu">
     <a class="btn" href="index.php">Home</a>|
     <a class="btn" href="topic.php">Topic Description</a>|

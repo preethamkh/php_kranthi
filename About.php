@@ -15,7 +15,7 @@
 
 	<body>
         <?php
-        require_once ("Header.php");
+        require_once("Header.inc");
 		?>
 		<div id="spacer">       
             <p>Introduction to IPV4 and IPV6 Technologies</p>
@@ -96,7 +96,7 @@
             </section>
         </section>
         <?php 
-		require_once ("Footer.php");
+		require_once("Footer.inc");
 		?>
 	</body>
 </html>

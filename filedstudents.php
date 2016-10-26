@@ -61,7 +61,7 @@ mysqli_free_result($result);
 mysqli_close($conn);
 } // if successful database connection
 echo "</section>";
-		require_once ("Footer.php");
+		require_once("Footer.inc");
 		?>
 			</body>
 </html>
