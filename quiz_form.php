@@ -10,7 +10,7 @@ require_once("Header.inc");
         <h4>QA</h4>
         <!--<form id="jobdetails" method="post" novalidate="novalidate" onsubmit="return(validate());"
               action="quiz_process.php" method="post">-->
-        <form id="jobdetails" method="post" novalidate="novalidate" action="quiz_save.php" method="post">
+        <form id="jobdetails" method="post" novalidate="novalidate" action="markquiz.php" method="post">
             <section>
                 <fieldset id="quizquestionbs">
                     <p>Student ID:
